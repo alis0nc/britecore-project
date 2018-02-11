@@ -1,0 +1,24 @@
+entity {size: "12"}
+
+[RiskType]
+*ID {label: "int"}
+RiskTypeName {label: "varchar[80]"}
+
+[Field]
+*ID {label: "int"}
+FieldName {label: "varchar[80]"}
++FieldTypeID {label: "int"}
+
+[RiskFieldLink]
+*ID {label: "int"}
++RiskTypeID {label: "int"}
++FieldID {label: "int"}
+
+[FieldType]
+*ID {label: "int"}
+FieldTypeName {label: "varchar[80]"}
+
+# relationships
+RiskFieldLink *--1 RiskType
+RiskFieldLink *--1 Field
+Field 1--1 FieldType
