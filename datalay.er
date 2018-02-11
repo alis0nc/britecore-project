@@ -2,11 +2,11 @@ entity {size: "12"}
 
 [RiskType]
 *ID {label: "int"}
-RiskTypeName {label: "varchar[80]"}
+RiskTypeName {label: "string"}
 
 [Field]
 *ID {label: "int"}
-FieldName {label: "varchar[80]"}
+FieldName {label: "string"}
 +FieldTypeID {label: "int"}
 
 [RiskFieldLink]
@@ -16,7 +16,7 @@ FieldName {label: "varchar[80]"}
 
 [FieldType]
 *ID {label: "int"}
-FieldTypeName {label: "varchar[80]"}
+FieldTypeName {label: "string"}
 
 # relationships
 RiskFieldLink *--1 RiskType
