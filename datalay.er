@@ -2,23 +2,17 @@ entity {size: "12"}
 
 [RiskType]
 *ID {label: "int"}
-RiskTypeName {label: "string"}
+riskTypeName {label: "string"}
 
 [Field]
 *ID {label: "int"}
-FieldName {label: "string"}
-+FieldTypeID {label: "int"}
-
-[RiskFieldLink]
-*ID {label: "int"}
-+RiskTypeID {label: "int"}
-+FieldID {label: "int"}
+fieldName {label: "string"}
++fieldType {label: "int"}
 
 [FieldType]
 *ID {label: "int"}
-FieldTypeName {label: "string"}
+fieldTypeName {label: "string"}
 
 # relationships
-RiskFieldLink *--1 RiskType
-RiskFieldLink *--1 Field
+RiskType *--* Field
 Field 1--1 FieldType
