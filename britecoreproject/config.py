@@ -5,7 +5,7 @@ from britecoreproject import app
 app.config.from_object(__name__)
 # load some reasonable defaults
 app.config.update(dict(
-    DATABASE='sqlite:/:memory:'
+    DATABASE='sqlite:///home/alisonc/Code/britecore-project/sample.sqlite3'
 ))
 # and overrides from an environment variable
-app.config.from_envvar('FLASKR_SETTINGS', silent=True)
+app.config.from_envvar('BRITECORE_RISKS_SETTINGS', silent=True)

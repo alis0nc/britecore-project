@@ -7,13 +7,6 @@ def hello():
     """Hello World."""
     return 'Hello world!'
 
-@app.route('/initdb')
-def init_db():
-    """Set up the database."""
-    db = dbfunctions.init_db()
-    sample_data.insert_sample_data()
-    return 'Database is good to go!'
-
 @app.route('/risk/<int:id>')
 def risk_by_id(id):
     """Get a risk, given its ID."""
