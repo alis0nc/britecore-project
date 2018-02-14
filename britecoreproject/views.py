@@ -1,5 +1,5 @@
 """API endpoints."""
-from britecoreproject import app, dbfunctions, orm, sample_data
+from britecoreproject import app, dbfunctions, orm
 import json
 
 @app.route('/hello')
