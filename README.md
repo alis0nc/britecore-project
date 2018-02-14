@@ -10,6 +10,8 @@ edit `britecoreproject/config.py` to set the location of the database. `sample.s
 ```
 pipenv install
 pipenv shell
+pip install -e .
+export FLASK_APP=britecoreproject
 flask run
 ```
 
